@@ -15,17 +15,16 @@
 ### 繁體中文
 此插件提供三階段的暴擊傷害控制系統，包括：
 - 多來源暴擊傷害設定（狀態、技能、裝備、武器、角色、職業）
-- 額外暴擊率加成(技能)
+- 額外暴擊率加成(技能/道具)
 - 基礎暴擊傷害能力值調整
 - 靈活的計算策略（加法、乘法、最大值、優先順序）
 
 ### 日本語
 このプラグインは3段階のクリティカルダメージ制御システムを提供します：
-- 複数ソースクリティカルダメージ設定（ステート、スキル、装備、武器、アクター、職業）
-- 追加クリティカル率向上システム
-- 基礎クリティカルダメージ能力値サポート
+- 複数のソースでクリティカルダメージを提供（ステート、スキル、装備、武器、アクター、職業）
+- スキルとアイテムで追加クリティカル率を設定
+- 基礎クリティカルダメージ能力値調整
 - 柔軟な計算戦略（加算、乗算、最大値、優先順位）
-- 完全なSRPGモード互換性
 
 ### English
 This plugin provides a three-stage critical damage control system featuring:
@@ -33,7 +32,6 @@ This plugin provides a three-stage critical damage control system featuring:
 - Additional critical rate enhancement system
 - Base critical damage parameter support
 - Flexible calculation strategies (add, multiply, max, priority)
-- Full SRPG mode compatibility
 
 ---
 
@@ -140,28 +138,15 @@ This plugin provides a three-stage critical damage control system featuring:
 - 不同來源的設定按優先順序生效
 - SRPG模式下功能正常運作
 
-//TODO:圖檔說明 - 需要添加暴擊傷害顯示、計算過程和不同策略效果的螢幕截圖
-
----
-
-## 5. 版權聲明
-
-**授權條款:** MIT License  
-**商業使用:** ✅ 允許  
-**二次開發:** ✅ 允許  
-**轉售權限:** ❌ 禁止轉售原插件  
-**署名要求:** 建議保留原作者資訊  
-
 ---
 
 ## 暴擊傷害計算策略詳解
 
-### 加法策略 (Add) ✨ 已優化
+### 加法策略 (Add)
 ```
 最終倍率 = Σ(各來源倍率)
 範例：狀態2.0 + 武器1.5 = 3.5倍
 ```
-**直觀計算：**用戶設置的數值直接相加，更符合預期！
 
 ### 乘法策略 (Multiply)
 ```
@@ -183,10 +168,18 @@ This plugin provides a three-stage critical damage control system featuring:
 
 ---
 
+## 5. 版權聲明
+
+**授權條款:** MIT License  
+**商業使用:** ✅ 允許  
+**二次開發:** ✅ 允許  
+**轉售權限:** ❌ 禁止轉售原插件  
+**署名要求:** 建議保留原作者資訊  
+
+---
 ## 注意事項 / 注意事項 / Notes
 
 - 此插件為Beta版本，建議在測試環境中充分驗證
 - 暴擊傷害計算會影響遊戲平衡，請謹慎設定數值
 - SRPG模式下會自動檢測敵人武器設定並使其生效，確保兼容性且在原模式下不影響
-- 額外暴擊率與基礎暴擊率疊加，不會超過100%
 - 建議定期備份存檔，以防配置錯誤影響遊戲進度 
