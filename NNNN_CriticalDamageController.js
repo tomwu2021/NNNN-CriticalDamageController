@@ -137,7 +137,6 @@
         if (!criticalDamageMetaArray || criticalDamageMetaArray.length === 0) {
             return DEFAULT_CRITICAL_DAMAGE;
         }
-        console.log('criticalDamageMetaArray:',criticalDamageMetaArray,CRITICAL_DAMAGE_STRATEGY);
         switch (CRITICAL_DAMAGE_STRATEGY) {
             case CRITICAL_DAMAGE_STRATEGIES.ADD:
                 // 加法策略：直接相加所有數值（更直觀）
@@ -179,7 +178,6 @@
                     break;
                 case 'skill':
                     sourceValues = this.getCriticalDamageFromSkillOrItem(action);
-                    console.log('skill sourceValues:',sourceValues);
                     break;
                 case 'armor':
                     sourceValues = this.getCriticalDamageFromArmors();
@@ -199,7 +197,6 @@
             }
             criticalDamageMetaArray.push(...sourceValues);
         });
-        console.log('getCriticalDamageMeta:',criticalDamageMetaArray);
         return criticalDamageMetaArray;
     };
     
